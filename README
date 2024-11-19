@@ -1,4 +1,4 @@
-This repository is a fork of the ACM Publication Template for use in non-ACM conferences, specifically NIME.
+This repository is a fork of the ACM Publication Template for use in NIME.
 
 - The `acmsmall` style has been modified to look better in a single column conference proceeding.
 - All styles are modified to use A4 paper.
