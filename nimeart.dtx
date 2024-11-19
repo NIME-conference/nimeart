@@ -15,8 +15,8 @@
 % The Current Maintainer of this work is Boris Veytsman,
 % <borisv@lk.net>
 %
-% This work consists of the file acmart.dtx, the derived file
-% acmart.cls, the files ACM-Reference-Format.bst, and templates
+% This work consists of the file nimeart.dtx, the derived file
+% nimeart.cls, the files ACM-Reference-Format.bst, and templates
 % sample-acmlarge.tex, sample-acmsmall.tex, sample-acmtog.tex,
 % samplebody-conf.tex, samplebody-journals.tex, sample-manuscript.tex,
 % sample-sigconf-authordraft.tex, sample-sigconf.tex,
@@ -55,7 +55,7 @@
 % \endgroup
 %
 % \ifx\currentjob\guide\OnlyDescription\fi
-% \GetFileInfo{acmart.dtx}
+% \GetFileInfo{nimeart.dtx}
 % \title{\LaTeX{} Class for the \emph{Association for Computing
 % Machinery}\thanks{\copyright 2016--2024, Association for Computing Machinery}}
 % \author{Boris Veytsman\thanks{%
@@ -191,16 +191,16 @@
 % but should rather rely on their \TeX\ distributions to provide it.  If you
 % decide to install the package yourself, follow the standard rules:
 % \begin{enumerate}
-% \item Run |latex acmart.ins|.  This will produce the file
-% |acmart.cls|
-% \item Put the files |acmart.cls|, |acm-jdslogo.png|,
+% \item Run |latex nimeart.ins|.  This will produce the file
+% |nimeart.cls|
+% \item Put the files |nimeart.cls|, |acm-jdslogo.png|,
 %   and |ACM-Reference-Format.bst|
 %   in places where \LaTeX{} can find them (see \cite{TeXFAQ} or
 %   the documentation for your \TeX{} system).\label{item:install}
 % \item Update the database of file names.  Again, see \cite{TeXFAQ}
 % or the documentation for your \TeX{} system for the system-specific
 % details.\label{item:update}
-% \item The file |acmart.pdf| provides the documentation for the
+% \item The file |nimeart.pdf| provides the documentation for the
 % package.  (This is probably the file you are reading now.)
 % \end{enumerate}
 % As an alternative to items~\ref{item:install} and~\ref{item:update}
@@ -265,24 +265,24 @@
 %
 % To use this class, put in the preamble of your document
 % \begin{quote}
-%   \cs{documentclass}\oarg{options}|{acmart}|
+%   \cs{documentclass}\oarg{options}|{nimeart}|
 % \end{quote}
 % There are several options corresponding to the type of the document and
 % its general appearance.  They are described below.  Generally
 % speaking, the options have |key=value| forms, for example,
 % \begin{verbatim}
-% \documentclass[format=acmsmall, screen=true, review=false]{acmart}
+% \documentclass[format=acmsmall, screen=true, review=false]{nimeart}
 % \end{verbatim}
 %
 %
 % The option |format| describes the format of the output.  There are
 % several possible values for this option, for example,
 % \begin{verbatim}
-%   \documentclass[format=acmtog]{acmart}
+%   \documentclass[format=acmtog]{nimeart}
 % \end{verbatim}
 % Actually the words |format=| can be omitted, e.g.,
 % \begin{verbatim}
-%   \documentclass[acmtog, review=false]{acmart}
+%   \documentclass[acmtog, review=false]{nimeart}
 % \end{verbatim}
 % The possible formats are listed in Table~\ref{tab:opts_format}.
 % Note that formats starting with |acm| are intended for journals,
@@ -344,7 +344,7 @@
 % |=true| can be omitted when setting a Boolean option, so instead of
 % |screen=true| one can write just |screen|, for example,
 % \begin{verbatim}
-% \documentclass[acmsmall, screen, review]{acmart}
+% \documentclass[acmsmall, screen, review]{nimeart}
 % \end{verbatim}
 % The option |review| is useful when combined with the |manuscript| format
 % option.  It provides a version suitable for reviewers and
@@ -1244,7 +1244,7 @@
 % \cs{documentclass} command.  This option can be repeated, for
 % example, 
 % \begin{verbatim}
-% \documentclass[sigconf, language=french, language=english]{acmart}
+% \documentclass[sigconf, language=french, language=english]{nimeart}
 % \end{verbatim}
 % The last language in the list is the main language of the paper,
 % i.e. the one for the main title, abstract, body, etc.  The other
@@ -1257,7 +1257,7 @@
 % \documentclass[sigconf,
 %                language=german, 
 %                language=english, 
-%                language=french]{acmart}
+%                language=french]{nimeart}
 % \end{verbatim}
 % 
 %
@@ -1265,7 +1265,7 @@
 % package~\cite{Braams22:Babel} (currently the package is tested with
 % English, French, German and Spanish languages; other languages may
 % require a translation of \cs{keywordsname} macro).  Actually
-% \textsl{acmart} loads \textsl{babel} internally, so you can use  the
+% \textsl{nimeart} loads \textsl{babel} internally, so you can use  the
 % facilities provided by this package.
 %
 %
@@ -1907,7 +1907,7 @@
 % automatic creation of the lists of symbols and concepts used.
 %
 %
-% By default |acmart| prevents all widows and orphans (i.e., lonely
+% By default |nimeart| prevents all widows and orphans (i.e., lonely
 % lines at the beginning or end of the page) and hyphenation at
 % the end of the page.  This is done by the rather strict settings
 % \begin{verbatim}
@@ -1963,9 +1963,9 @@
 %\subsection{Disabled or forbidden commands}
 %\label{sec:ug_disabled}
 %
-% The goal of |acmart| package is to provide a uniform look and feel
+% The goal of |nimeart| package is to provide a uniform look and feel
 % for ACM publications.  Accordingly, a number of commands is
-% forbidden or disabled in |acmart|.
+% forbidden or disabled in |nimeart|.
 %
 % You may \emph{not} put several authors or several e-mails into a
 % \cs{author} or \cs{email} command.  This may lead to errors or
@@ -1977,29 +1977,29 @@
 % You should not abuse the command \cs{vspace}:  this command may
 % disturb the typesetting of ACM papers.
 %
-% You should not load |amssymb| package since the package |acmart|
+% You should not load |amssymb| package since the package |nimeart|
 % defines the corresponding symbols itself.
 %
 %\subsection{Notes for wizards}
 %\label{sec:ug_preload}
 %
-% Sometimes you need to change the behavior of |acmart|.  The
+% Sometimes you need to change the behavior of |nimeart|.  The
 % usual way to do this is to redefine commands in the preamble.
-% However, these definitions are executed \emph{after} |acmart| is
+% However, these definitions are executed \emph{after} |nimeart| is
 % loaded and certain decisions are made.  This presents a number of
 % problems.
 %
-% For example, one may want to use the |titletoc| package with |acmart|.
+% For example, one may want to use the |titletoc| package with |nimeart|.
 % This package should be loaded before |hyperref|.  However, since
-% |acmart| loads |hyperref| itself, the line |\usepackage{titletoc}|
+% |nimeart| loads |hyperref| itself, the line |\usepackage{titletoc}|
 % in the preamble will lead to grief (see
 % \url{http://tex.stackexchange.com/questions/357265/using-titletoc-with-acm-acmart-style}).
 %
 % Another example is passing options to a package.  Suppose you want to
 % use the |dvipsnames| option of the |xcolor| package.  Normally you cannot do
-% this because |acmart| loads this package itself without options.
+% this because |nimeart| loads this package itself without options.
 %
-% The file |acmart-preload-hook.tex| can be used to solve these
+% The file |nimeart-preload-hook.tex| can be used to solve these
 % problems.  If this file exists, it will be processed before any other
 % package.  You can use this file to load packages or pass options to
 % them.  For example, if you put in this file
@@ -2135,7 +2135,7 @@
 %\subsection{Samples}
 %\label{sec:samples}
 %
-% There are several samples of acmart documents, that can serve as
+% There are several samples of nimeart documents, that can serve as
 % templates for the authors.  Among them
 % |sample-sig...| are templates for conference papers, while
 % |sample-acm...| are templates for journal articles and special
@@ -2183,7 +2183,7 @@
 %
 % You may use this format in the |nonacm| mode only, as in
 % \begin{verbatim}
-% \documentclass[sigchi-a, nonacm]{acmart}
+% \documentclass[sigchi-a, nonacm]{nimeart}
 % \end{verbatim}
 %
 %
@@ -2222,7 +2222,7 @@
 % and \url{https://tug.org/twg/accessibility/overview.html}.
 %
 % At present this work is highly experimental.  You may try the
-% experiments by (1)~using the class |acmart-tagged| in the document
+% experiments by (1)~using the class |nimeart-tagged| in the document
 % class line, and (2)~adding the command
 % \cs{DocumentMetadata}\oarg{options} in the preamble, see the file
 % \path{sample-acmsmall-tagged.tex}.  If you do this, please \emph{do
@@ -2234,7 +2234,7 @@
 %
 % \StopEventually{
 % \clearpage
-% \bibliography{acmart}
+% \bibliography{nimeart}
 % \bibliographystyle{unsrt}}
 %
 % \clearpage
@@ -2252,10 +2252,10 @@
 %    \begin{macrocode}
 %<class>\NeedsTeXFormat{LaTeX2e}
 %<*gobble>
-\ProvidesFile{acmart.dtx}
+\ProvidesFile{nimeart.dtx}
 %</gobble>
-%<class&!tagged>\ProvidesClass{acmart}
-%<tagged>\ProvidesClass{acmart-tagged}
+%<class&!tagged>\ProvidesClass{nimeart}
+%<tagged>\ProvidesClass{nimeart-tagged}
 [2024/10/19 v2.10 Typesetting articles for the Association for Computing Machinery]
 %    \end{macrocode}
 %
@@ -2389,12 +2389,12 @@
 \RecordChanges
 \EnableCrossrefs
 \begin{document}
-  \DocInput{acmart.dtx}
+  \DocInput{nimeart.dtx}
 \end{document}
 %</gobble>
 %<*class>
-%<!tagged>\def\@classname{acmart}
-%<tagged>\def\@classname{acmart-tagged}
+%<!tagged>\def\@classname{nimeart}
+%<tagged>\def\@classname{nimeart-tagged}
 %    \end{macrocode}
 %
 %
@@ -2402,11 +2402,11 @@
 %\subsection{Preload hook}
 %\label{sec:preload}
 %
-% We preload |acmart-preload-hook|:
+% We preload |nimeart-preload-hook|:
 %    \begin{macrocode}
-\InputIfFileExists{acmart-preload-hook.tex}{%
+\InputIfFileExists{nimeart-preload-hook.tex}{%
   \ClassWarning{\@classname}{%
-    I am loading acmart-preload-hook.tex. You are fully responsible
+    I am loading nimeart-preload-hook.tex. You are fully responsible
     for any problems from now on.}}{}
 %    \end{macrocode}
 %
@@ -2858,7 +2858,7 @@
 % \changes{v2.09}{2022/08/25}{Saved the old definitions (Ulrike's
 % code}
 % Before we load the base class we want to save the original
-% definitions of sectioning commands since |acmart| redefines them,
+% definitions of sectioning commands since |nimeart| redefines them,
 % and we need the vanilla versions.
 % \begin{macro}{\@startsection@kernel}
 % \changes{v2.00}{2023/11/19}{Added macro}
@@ -3184,7 +3184,7 @@
     unless are languages are defined. \MessageBreak
     Please choose the languages in \string\documentclass
     \MessageBreak
-    (e.g. \string\documentclass[languages={french, english}]{acmart}), 
+    (e.g. \string\documentclass[languages={french, english}]{nimeart}), 
     \MessageBreak
     or delete the command.}%
   \fi}
@@ -3791,7 +3791,7 @@
 %   is later used to set the \cs{listparindent} length in the |quotation|
 %   environment and the \cs{parindent} length in the \cs{@footnotetext}
 %   command.  We set \cs{normalparindent} to the value of \cs{parindent}
-%   as selected by |acmart| for consistent paragraph indents.
+%   as selected by |nimeart| for consistent paragraph indents.
 %    \begin{macrocode}
 \setlength\normalparindent{\parindent}
 %    \end{macrocode}
@@ -6496,7 +6496,7 @@
     pdftitle={\@title},
     pdfsubject={\@concepts},
     pdfkeywords={\@keywords},
-    pdfcreator={LaTeX with acmart
+    pdfcreator={LaTeX with nimeart
       \csname ver@\@classname.cls\endcsname\space
       and hyperref
       \csname ver@hyperref.sty\endcsname}}%

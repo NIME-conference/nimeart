@@ -1,7 +1,7 @@
-acmart.cls
 nimeart.cls
-acmart-tagged.cls
-acmart.pdf
+nimeart.cls
+nimeart-tagged.cls
+nimeart.pdf
 acmguide.pdf
 samples/sample-*.pdf
 *.log

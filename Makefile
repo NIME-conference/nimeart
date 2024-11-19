@@ -1,12 +1,12 @@
 #
-# Makefile for acmart package
+# Makefile for nimeart package
 #
 # This file is in public domain
 #
 # $Id: Makefile,v 1.10 2016/04/14 21:55:57 boris Exp $
 #
 
-PACKAGE=acmart
+PACKAGE=nimeart
 
 DEV=-dev # To switch dev on
 #DEV=
@@ -168,13 +168,13 @@ zip:  all clean
 # distros
 distros: all docclean
 	zip -r acm-distro.zip  \
-	acmart.pdf acmguide.pdf samples *.cls ACM-Reference-Format.* \
+	nimeart.pdf acmguide.pdf samples *.cls ACM-Reference-Format.* \
 	--exclude samples/sample-acmengage*
 	zip -r acmengage-distro.zip samples/sample-acmengage* \
 	samples/*.bib \
-	acmart.pdf acmguide.pdf  *.cls ACM-Reference-Format.*
+	nimeart.pdf acmguide.pdf  *.cls ACM-Reference-Format.*
 
-acmcp.zip: ${ACMCPSAMPLES} acmart.cls
+acmcp.zip: ${ACMCPSAMPLES} nimeart.cls
 	zip $@ $+
 
 samples/sample-acmcp.tex: samples/samples.ins samples/samples.dtx
@@ -182,6 +182,6 @@ samples/sample-acmcp.tex: samples/samples.ins samples/samples.dtx
 
 
 samples/sample-acmcp-%.tex: samples/sample-acmcp.tex samples/acm-jdslogo.png
-	sed 's/acmArticleType{Review}/acmArticleType{$*}/' $< > $@
+	sed 's/nimearticleType{Review}/nimearticleType{$*}/' $< > $@
 
 .PHONY: all ALLSAMPLES docclean clean distclean archive zip
