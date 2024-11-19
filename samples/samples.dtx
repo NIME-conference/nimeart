@@ -31,30 +31,30 @@
 %% command.
 %%
 %% For submission and review of your manuscript please change the
-%% command to \documentclass[manuscript, screen, review]{acmart}.
+%% command to \documentclass[manuscript, screen, review]{nimeart}.
 %%
 %% When submitting camera ready or to TAPS, please change the command
-%% to \documentclass[sigconf]{acmart} or whichever template is required
+%% to \documentclass[sigconf]{nimeart} or whichever template is required
 %% for your publication. 
 %%
 %%
-%<manuscript>\documentclass[manuscript,screen,review]{acmart}
-%<acmsmall&!tagged>\documentclass[acmsmall]{acmart}
-%<acmsmall-conf>\documentclass[acmsmall]{acmart}
-%<acmsmall-biblatex>\documentclass[acmsmall,natbib=false]{acmart}
-%<acmsmall-submission>\documentclass[acmsmall,screen,review]{acmart}
-%<acmlarge>\documentclass[acmlarge]{acmart}
-%<acmtog|acmtog-conf>\documentclass[acmtog]{acmart}
-%<sigconf>\documentclass[sigconf]{acmart}
-%<sigconf-biblatex>\documentclass[sigconf,natbib=false]{acmart}
-%<authordraft>\documentclass[sigconf,authordraft]{acmart}
-%<sigplan>\documentclass[sigplan,screen]{acmart}
-%<sigchi>\documentclass[sigchi]{acmart}
-%<sigchi-a>\documentclass[sigchi-a, nonacm]{acmart}
+%<manuscript>\documentclass[manuscript,screen,review]{nimeart}
+%<acmsmall&!tagged>\documentclass[acmsmall]{nimeart}
+%<acmsmall-conf>\documentclass[acmsmall]{nimeart}
+%<acmsmall-biblatex>\documentclass[acmsmall,natbib=false]{nimeart}
+%<acmsmall-submission>\documentclass[acmsmall,screen,review]{nimeart}
+%<acmlarge>\documentclass[acmlarge]{nimeart}
+%<acmtog|acmtog-conf>\documentclass[acmtog]{nimeart}
+%<sigconf>\documentclass[sigconf]{nimeart}
+%<sigconf-biblatex>\documentclass[sigconf,natbib=false]{nimeart}
+%<authordraft>\documentclass[sigconf,authordraft]{nimeart}
+%<sigplan>\documentclass[sigplan,screen]{nimeart}
+%<sigchi>\documentclass[sigchi]{nimeart}
+%<sigchi-a>\documentclass[sigchi-a, nonacm]{nimeart}
 %<sigconf-i13n>\documentclass[sigconf, language=french,
-%<sigconf-i13n>language=german, language=spanish, language=english]{acmart}
-%<acmcp>\documentclass[acmcp]{acmart}
-%<acmsmall&tagged>\documentclass[acmsmall]{acmart-tagged}
+%<sigconf-i13n>language=german, language=spanish, language=english]{nimeart}
+%<acmcp>\documentclass[acmcp]{nimeart}
+%<acmsmall&tagged>\documentclass[acmsmall]{nimeart-tagged}
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
 \AtBeginDocument{%
@@ -286,7 +286,7 @@
 \begin{abstract}
   A clear and well-documented \LaTeX\ document is presented as an
   article formatted for publication by ACM in a conference proceedings
-  or journal publication. Based on the ``acmart'' document class, this
+  or journal publication. Based on the ``nimeart'' document class, this
   article presents and explains many of the common variations, as well
   as many of the formatting elements an author may use in the
   preparation of the documentation of their work.
@@ -298,7 +298,7 @@
   Un document \LaTeX\ clair et bien documenté est présenté comme un
   article formaté pour publication par ACM dans les actes d'une
   conférence ou parution dans une revue. Basé sur la classe de
-  document ``acmart'', ce l'article présente et explique de nombreuses
+  document ``nimeart'', ce l'article présente et explique de nombreuses
   variations courantes, ainsi que autant d'éléments de mise en forme
   qu'un auteur peut utiliser dans le préparation de la documentation
   de leur travail.
@@ -308,7 +308,7 @@
   Es wird ein übersichtliches und gut dokumentiertes \LaTeX\-Dokument präsentiert,
   welches für die Veröffentlichung durch ACM in einem Tagungsband oder
   als Zeitschriftenpublikation formatiert wurde.
-  Basierend auf der Dokumentenklasse ``acmart'' präsentiert und erklärt dieser Artikel
+  Basierend auf der Dokumentenklasse ``nimeart'' präsentiert und erklärt dieser Artikel
   viele der Formatierungselemente sowie auch viele der gängigen Variationen,
   die ein Autor bei der Beschreibung seiner Arbeit verwenden darf.
 \end{translatedabstract}
@@ -317,7 +317,7 @@
   Un documento \LaTeX\ claro y bien documentado se presenta como un
   artículo formateado para su publicación por ACM en las actas de una
   conferencia o publicación de una revista. Basado en la clase de
-  documento ``acmart'', este artículo presenta y explica muchas de las
+  documento ``nimeart'', este artículo presenta y explica muchas de las
   variaciones comunes, así como tantos de los elementos de formato que
   un autor puede usar en el preparación de la documentación de su
   trabajo.
@@ -372,13 +372,13 @@ guide to the process of preparing your work for publication. If you
 have published with ACM before, this document provides insight and
 instruction into more recent changes to the article template.
 
-The ``\verb|acmart|'' document class can be used to prepare articles
+The ``\verb|nimeart|'' document class can be used to prepare articles
 for any ACM publication --- conference or journal, and for any stage
 of publication, from review to final ``camera-ready'' copy, to the
 author's own version, with {\itshape very} few changes to the source.
 
 \section{Template Overview}
-As noted in the introduction, the ``\verb|acmart|'' document class can
+As noted in the introduction, the ``\verb|nimeart|'' document class can
 be used to prepare many different kinds of documentation --- a
 double-anonymous initial submission of a full-length technical paper, a
 two-page SIGGRAPH Emerging Technologies abstract, a ``camera-ready''
@@ -393,12 +393,12 @@ available from
 
 \subsection{Template Styles}
 
-The primary parameter given to the ``\verb|acmart|'' document class is
+The primary parameter given to the ``\verb|nimeart|'' document class is
 the {\itshape template style} which corresponds to the kind of publication
 or SIG publishing the work. This parameter is enclosed in square
 brackets and is a part of the {\verb|documentclass|} command:
 \begin{verbatim}
-  \documentclass[STYLE]{acmart}
+  \documentclass[STYLE]{nimeart}
 \end{verbatim}
 
 Journals use one of three template styles. All but three ACM journals
@@ -437,18 +437,18 @@ Frequently-used parameters, or combinations of parameters, include:
 This document uses the following string as the first command in the
 source file:
 \begin{verbatim}
-%<manuscript>\documentclass[manuscript,screen,review]{acmart}
-%<acmsmall|acmsmall-conf>\documentclass[acmsmall]{acmart}
-%<acmsmall-submission>\documentclass[acmsmall,screen,review]{acmart}
-%<acmlarge>\documentclass[acmlarge]{acmart}
-%<acmtog|acmtog-conf>\documentclass[acmtog]{acmart}
-%<sigconf>\documentclass[sigconf]{acmart}
-%<authordraft>\documentclass[sigconf,authordraft]{acmart}
-%<sigplan>\documentclass[sigplan,screen]{acmart}
-%<sigchi>\documentclass[sigchi]{acmart}
-%<sigchi-a>\documentclass[sigchi-a]{acmart}
+%<manuscript>\documentclass[manuscript,screen,review]{nimeart}
+%<acmsmall|acmsmall-conf>\documentclass[acmsmall]{nimeart}
+%<acmsmall-submission>\documentclass[acmsmall,screen,review]{nimeart}
+%<acmlarge>\documentclass[acmlarge]{nimeart}
+%<acmtog|acmtog-conf>\documentclass[acmtog]{nimeart}
+%<sigconf>\documentclass[sigconf]{nimeart}
+%<authordraft>\documentclass[sigconf,authordraft]{nimeart}
+%<sigplan>\documentclass[sigplan,screen]{nimeart}
+%<sigchi>\documentclass[sigchi]{nimeart}
+%<sigchi-a>\documentclass[sigchi-a]{nimeart}
 %<sigconf-i13n>\documentclass[sigconf, language=french,
-%<sigconf-i13n>language=german, language=spanish, language=english]{acmart}
+%<sigconf-i13n>language=german, language=spanish, language=english]{nimeart}
 \end{verbatim}
 
 
@@ -464,7 +464,7 @@ vertical spacing between elements of your work --- is not allowed.
 
 \section{Typefaces}
 
-The ``\verb|acmart|'' document class requires the use of the
+The ``\verb|nimeart|'' document class requires the use of the
 ``Libertine'' typeface family. Your \TeX\ installation should include
 this set of packages. Please do not substitute other typefaces. The
 ``\verb|lmodern|'' and ``\verb|ltimes|'' packages should not be used,
@@ -551,7 +551,7 @@ page in length, and is optional for one-page articles (abstracts).
 
 \section{CCS Concepts and User-Defined Keywords}
 
-Two elements of the ``acmart'' document class provide powerful
+Two elements of the ``nimeart'' document class provide powerful
 taxonomic tools for you to help readers find your work in an online
 search.
 
@@ -603,7 +603,7 @@ This is a subparagraph.
 
 \section{Tables}
 
-The ``\verb|acmart|'' document class includes the ``\verb|booktabs|''
+The ``\verb|nimeart|'' document class includes the ``\verb|booktabs|''
 package --- \url{https://ctan.org/pkg/booktabs} --- for preparing
 high-quality tables.
 
@@ -907,7 +907,7 @@ additional titles and abstracts in English and German may start with
 the following command
 \begin{verbatim}
 \documentclass[sigconf, language=english, language=german,
-               language=french]{acmart}
+               language=french]{nimeart}
 \end{verbatim}
 
 The title, subtitle, keywords and abstract will be typeset in the main
