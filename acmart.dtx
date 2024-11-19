@@ -3680,60 +3680,60 @@
 \RequirePackage{geometry}
 \ifcase\ACM@format@nr
 \relax % manuscript
-   \geometry{a4paper,head=13pt,
+   \geometry{a4paper,head=13pt, % NIMEified.
    marginparwidth=6pc,heightrounded}%
 \or % acmsmall
    \geometry{twoside=true,
      includeheadfoot, head=13pt, foot=2pc,
-     paperwidth=210mm, paperheight=297mm, % a4 size
-     top=58pt, bottom=44pt, inner=46pt, outer=46pt,
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
+     top=58pt, bottom=73pt, inner=54pt, outer=54pt,
      marginparwidth=2pc,heightrounded
    }%
 \or % acmlarge
    \geometry{twoside=true, head=13pt, foot=2pc,
-   paperwidth=210mm, paperheight=297mm, % a4 size
+   paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
    includeheadfoot,
      top=78pt, bottom=114pt, inner=81pt, outer=81pt,
      marginparwidth=4pc,heightrounded
      }%
 \or % acmtog
    \geometry{twoside=true, head=13pt, foot=2pc,
-     paperwidth=210mm, paperheight=297mm, % a4 size
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      includeheadfoot, columnsep=24pt,
      top=52pt, bottom=75pt, inner=52pt, outer=52pt,
      marginparwidth=2pc,heightrounded
      }%
 \or % sigconf
    \geometry{twoside=true, head=13pt,
-     paperwidth=210mm, paperheight=297mm, % a4 size
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      includeheadfoot, columnsep=2pc,
      top=57pt, bottom=73pt, inner=54pt, outer=54pt,
      marginparwidth=2pc,heightrounded
      }%
 \or % siggraph
    \geometry{twoside=true, head=13pt,
-     paperwidth=210mm, paperheight=297mm, % a4 size
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      includeheadfoot, columnsep=2pc,
      top=57pt, bottom=73pt, inner=54pt, outer=54pt,
      marginparwidth=2pc,heightrounded
      }%
 \or % sigplan
    \geometry{twoside=true, head=13pt,
-     paperwidth=210mm, paperheight=297mm, % a4 size
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      includeheadfoot=false, columnsep=2pc,
      top=1in, bottom=1in, inner=0.75in, outer=0.75in,
      marginparwidth=2pc,heightrounded
      }%
 \or % sigchi
    \geometry{twoside=true, head=13pt,
-     paperwidth=210mm, paperheight=297mm, % a4 size
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      includeheadfoot, columnsep=2pc,
      top=66pt, bottom=73pt, inner=54pt, outer=54pt,
      marginparwidth=2pc,heightrounded
      }%
 \or % sigchi-a
    \geometry{twoside=false, head=13pt,
-     paperwidth=11in, paperheight=8.5in,
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      includeheadfoot, marginparsep=72pt,
      marginparwidth=170pt, columnsep=20pt,
      top=72pt, bottom=72pt, left=314pt, right=72pt
@@ -3742,7 +3742,7 @@
      \reversemarginpar
 \or % acmengage
    \geometry{twoside=true, head=13pt,
-     paperwidth=210mm, paperheight=297mm, % a4 size
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      includeheadfoot, columnsep=2pc,
      top=57pt, bottom=73pt, inner=54pt, outer=54pt,
      marginparwidth=2pc,heightrounded
@@ -3750,7 +3750,7 @@
 \or % acmcp
    \geometry{twoside=true,
      includeheadfoot, head=13pt, foot=2pc,
-     paperwidth=6.75in, paperheight=10in,
+     paperwidth=210mm, paperheight=297mm, % a4 size % NIMEified.
      top=58pt, bottom=44pt, inner=46pt, outer=46pt,
      marginparwidth=2pc,heightrounded
    }%
@@ -7843,23 +7843,22 @@
         \fancyfoot[RO,LE]{\footnotesize Manuscript submitted to ACM}
       \fi%
     \or % acmsmall
-      \fancyhead[LE]{\ACM@linecountL\@headfootfont\@acmArticlePage}%
-      \fancyhead[RO]{\@headfootfont\@acmArticlePage}%
-      \fancyhead[RE]{\@headfootfont\@shortauthors}%
-      \fancyhead[LO]{\ACM@linecountL\@headfootfont\shorttitle}%
+    % acmsmall uses sigconf header % NIMEified.
+    \fancyhead[LE]{\ACM@linecountL\@headfootfont \acmConference@shortname, \acmConference@date, \acmConference@venue}%
+    \fancyhead[RO]{\@headfootfont \acmConference@shortname, \acmConference@date, \acmConference@venue\ACM@linecountR}%
+    \fancyhead[RE]{\@headfootfont \@shortauthors\ACM@linecountR}%
+    \fancyhead[LO]{\ACM@linecountL\@headfootfont\shorttitle}%
       \if@ACM@nonacm\else%
-        \fancyfoot[RO,LE]{\footnotesize \@journalNameShort, Vol. \@acmVolume, No.
-        \@acmNumber, Article \@acmArticle.  Publication date: \@acmPubDate.}%
+      % no footer % NIMEified.
       \fi
     \or % acmlarge
-      \fancyhead[LE]{\ACM@linecountL\@headfootfont
-      \@acmArticlePage\quad\textbullet\quad\@shortauthors}%
-      \fancyhead[LO]{\ACM@linecountL}%
-      \fancyhead[RO]{\@headfootfont
-        \shorttitle\quad\textbullet\quad\@acmArticlePage}%
+      % acmlarge uses sigconf header % NIMEified.
+      \fancyhead[LE]{\ACM@linecountL\@headfootfont \acmConference@shortname, \acmConference@date, \acmConference@venue}%
+      \fancyhead[RO]{\@headfootfont \acmConference@shortname, \acmConference@date, \acmConference@venue\ACM@linecountR}%
+      \fancyhead[RE]{\@headfootfont \@shortauthors\ACM@linecountR}%
+      \fancyhead[LO]{\ACM@linecountL\@headfootfont\shorttitle}%
       \if@ACM@nonacm\else%
-        \fancyfoot[RO,LE]{\footnotesize \@journalNameShort, Vol. \@acmVolume, No.
-        \@acmNumber, Article \@acmArticle.  Publication date: \@acmPubDate.}%
+        % no footer % NIMEified.
       \fi
     \or % acmtog
       \fancyhead[LE]{\ACM@linecountL\@headfootfont
@@ -8010,9 +8009,7 @@
       \fi%
     \or % acmsmall
       \if@ACM@nonacm\else%
-        \fancyfoot[RO,LE]{\footnotesize \@journalNameShort, Vol. \@acmVolume, No.
-        \@acmNumber, Article \@acmArticle.  Publication date:
-        \@acmPubDate.}%
+        % no footer for acmsmall % NIMEified.
       \fi%
       \fancyhead[LE]{\ACM@linecountL\@acmBadgeL}%
       \fancyhead[LO]{\ACM@linecountL\@acmBadgeL}%
@@ -8020,9 +8017,7 @@
       \fancyhead[RE]{\@acmBadgeR}%
     \or % acmlarge
       \if@ACM@nonacm\else%
-        \fancyfoot[RO,LE]{\footnotesize \@journalNameShort, Vol. \@acmVolume, No.
-        \@acmNumber, Article \@acmArticle.  Publication date:
-        \@acmPubDate.}%
+        % no footer for acmlarge % NIMEified.
       \fi%
       \fancyhead[RO]{\@acmBadgeR}%
       \fancyhead[RE]{\@acmBadgeR}%
