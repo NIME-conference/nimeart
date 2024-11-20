@@ -1,7 +1,0 @@
-This repository is a fork of the ACM Publication Template for use in NIME.
-
-- The `acmsmall` style has been modified to look better in a single column conference proceeding.
-- All styles are modified to use A4 paper.
-- The sample templates have been adjusted to produce 1- and 2-column conference proceedings documents.
-
-This code is distributed in compliance with the original package's LaTeX Project Public License with the original source available here: <https://github.com/borisveytsman/acmart>.
