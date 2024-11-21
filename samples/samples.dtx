@@ -27,6 +27,25 @@
 \fi
 %</tagged>
 %<*all>
+%%
+%% History of NIME Template Updaters:
+%% Modified by Florent Berthaut, Charles Martin, Yichen Wang, 21 November 2024
+%% Modified by Adnan Marquez-Borbon 30 November 2022
+%% Modified by Courtney Reed 28 November 2022
+%% Modified by Joe Wright 14 December 2019
+%% Modified by Niccolò Granieri 10 October 2018 
+%% Modified by Angelo Fraietta 23 December 2018
+%% Modified by Angelo Fraietta 22 November 2018
+%% Modified by Rodrigo Schramm on 22 September 2018
+%% Modified by Luke Dahl on 17 October 2-17
+%% Modified by Cumhur Erkut on <2016-10-11 Tue>
+%% Modified by Edgar Berdahl on 5 November 2014
+%% Modified by Baptiste Caramiaux on 25 November 2013
+%% Modified by Kyogu Lee on 7 October 2012
+%% Modified by Georg Essl on 7 November 2011
+%%
+%% And here's the template:
+%%
 %% The first command in your LaTeX source must be the \documentclass
 %% command.
 %%
@@ -74,6 +93,7 @@
 %</all>
 %<*proceedings>
 %% These commands are for a PROCEEDINGS abstract or paper.
+%% Make sure this is up to date with the correct edition of NIME.
 \acmConference[NIME '25]{International Conference on New Interfaces for Musical Expression}{June 24--27,
   2025}{Canberra, Australia}
 %% This suppresses the ACM Reference Format printing.
@@ -286,7 +306,8 @@
 \begin{abstract}
   A clear and well-documented \LaTeX\ document is presented as an
   article formatted for publication by ACM in a conference proceedings
-  or journal publication. Based on the ``nimeart'' document class, this
+  or journal publication. This uses ``nimeart'', a fork of the ``acmart''
+  documentclass with additions for the NIME conference. This
   article presents and explains many of the common variations, as well
   as many of the formatting elements an author may use in the
   preparation of the documentation of their work.
@@ -895,42 +916,12 @@ and note that in the appendix, sections are lettered, not
 numbered. This document has two appendices, demonstrating the section
 and subsection identification method.
 
-\section{Multi-language papers}
+%% The Ethical Standards section is mandatory for all NIME submissions.
+\section{Ethical Standards}
 
-Papers may be written in languages other than English or include
-titles, subtitles, keywords and abstracts in different languages (as a
-rule, a paper in a language other than English should include an
-English title and an English abstract).  Use \verb|language=...| for
-every language used in the paper.  The last language indicated is the
-main language of the paper.  For example, a French paper with
-additional titles and abstracts in English and German may start with
-the following command
-\begin{verbatim}
-\documentclass[sigconf, language=english, language=german,
-               language=french]{nimeart}
-\end{verbatim}
-
-The title, subtitle, keywords and abstract will be typeset in the main
-language of the paper.  The commands \verb|\translatedXXX|, \verb|XXX|
-begin title, subtitle and keywords, can be used to set these elements
-in the other languages.  The environment \verb|translatedabstract| is
-used to set the translation of the abstract.  These commands and
-environment have a mandatory first argument: the language of the
-second argument.  See \verb|sample-sigconf-i13n.tex| file for examples
-of their usage.
-
-\section{SIGCHI Extended Abstracts}
-
-The ``\verb|sigchi-a|'' template style (available only in \LaTeX\ and
-not in Word) produces a landscape-orientation formatted article, with
-a wide left margin. Three environments are available for use with the
-``\verb|sigchi-a|'' template style, and produce formatted output in
-the margin:
-\begin{description}
-\item[\texttt{sidebar}:]  Place formatted text in the margin.
-\item[\texttt{marginfigure}:] Place a figure in the margin.
-\item[\texttt{margintable}:] Place a table in the margin.
-\end{description}
+To ensure objectivity and transparency in research and to ensure that accepted principles of ethical and professional conduct have been followed, authors must include a section “Ethical Standards” before the References. 
+This section should include (if relevant): information regarding sources of funding, potential conflicts of interest (financial or non-financial), informed consent if the research involved human participants, statement on welfare of animals if the research involved animals or any other information or context that helps ethically situate your research.
+For help with the ethics section, feel free to ask on the NIME forum: \url{https://forum.nime.org}.
 
 %%
 %% The acknowledgments section is defined using the "acks" environment
